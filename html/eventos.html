@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meet Up & Fun - Events</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link href="/styles/styles-event.css" rel="stylesheet">
+    <script src="/script/script.js" defer></script>
+    <body>
+        <header>
+            <nav class="container">
+                <div class="logo">Meet Up & Fun</div>
+                <div class="nav-links">
+                    <a href="/html/home.html">Home</a>
+                    <a href="/html/eventos.html">Eventos</a>
+                    <a href="/html/profile.html">Perfil</a>
+                    <a href="/html/contact.html">Contact</a>
+                </div>
+                <button class="register-btn" id="register-btn">Register</button>
+            </nav>
+        </header>
+
+    <section class="hero">
+        <h2>Descubre eventos impresionantes!</h2>
+        <p>Unete a nuestra comunidad y experimenta momentos inolvidables con mas gente.</p>
+        <a class="btn">Explora Eventos</a>
+    </section>
+
+    <main>
+        <div class="filter-container">
+            <button class="filter-btn active">Todos los eventos</button>
+            <button class="filter-btn">Exterior</button>
+            <button class="filter-btn">Tecnologia</button>
+            <button class="filter-btn">Arte & Cultura</button>
+            <button class="filter-btn">Comida & Bebida</button>
+        </div>
+        <div class="events-grid">
+            <div class="event-card">
+                <img src="/media/Evento2.jpg" alt="Summer Beach Party" class="event-image">
+                <div class="event-details">
+                    <h2 class="event-title">Paseo en Globo</h2>
+                    <p class="event-date">Julio 16, 2024 | 2:00 PM</p>
+                    <p class="event-location">Miami Platja, Tarragona</p>
+                    <p class="event-description">Únete a pasar un momento romántico sobrevolando la ciudad en globo aerostático.</p>
+                    <a href="#" class="btn">Mas información</a>
+                </div>
+            </div>
+            <div class="event-card">
+                <img src="/media/Evento1.jpg" alt="Tech Meetup" class="event-image">
+                <div class="event-details">
+                    <h2 class="event-title">Holy Festival</h2>
+                    <p class="event-date">Agosto 5, 2024 | 6:30 PM</p>
+                    <p class="event-location">Las Ramblas, Barcelona</p>
+                    <p class="event-description">Vuelve el festival más colorido del mundo! Conecta con la música a la par que llueven colores.</p>
+                    <a href="/html/eventDetail.html" class="btn">Más información</a>
+                </div>
+            </div>
+            <div class="event-card">
+                <img src="/media/pexels-rdne-8172941.jpg" alt="Yoga in the Park" class="event-image">
+                <div class="event-details">
+                    <h2 class="event-title">Yoga en el Parque</h2>
+                    <p class="event-date">Cada Domingo | 9:00 AM</p>
+                    <p class="event-location">Parc de la Ciutadella, Barcelona</p>
+                    <p class="event-description">Empieza tu Domingo con energía haciendo Yoga en el parque con más gente y asi hacer ejercicio.</p>
+                    <a href="/html/eventDetail.html" class="btn">Más Información</a>
+                </div>
+            </div>
+            <div class="event-card">
+                <img src="/media/f1.jpg" alt="Yoga in the Park" class="event-image">
+                <div class="event-details">
+                    <h2 class="event-title">Gran Premio España - F1</h2>
+                    <p class="event-date">Octubre 25, 2024 Domingo | 11:00 AM</p>
+                    <p class="event-location">Circuit de Montmeló, Barcelona</p>
+                    <p class="event-description">Vuelve la F1 a España! Disfruta de la categoria reina del automobilismo en una carrera que te levantara del asiento.</p>
+                    <a href="/html/eventDetail.html" class="btn">Más Información</a>
+                </div>
+            </div>
+            <div class="event-card">
+                <img src="/media/techno.jpg" alt="Yoga in the Park" class="event-image">
+                <div class="event-details">
+                    <h2 class="event-title">Techno Berlin - Razzmataz</h2>
+                    <p class="event-date"> Ocubre 2, 2024 Sabado | 10:00 PM</p>
+                    <p class="event-location">Sala Razzmataz, Barcelona</p>
+                    <p class="event-description">Disfruta de una noche que te traslada a una sala de Techno en Berlin pero aqui, en Razzmataz!</p>
+                    <a href="/html/eventDetail.html" class="btn">Más Información</a>
+                </div>
+            </div>
+            <div class="event-card">
+                <img src="/media/gaming.jpg" alt="Yoga in the Park" class="event-image">
+                <div class="event-details">
+                    <h2 class="event-title">Final League of Legends Worlds</h2>
+                    <p class="event-date">Novimebre 2, 2024 Miercoles | 5:00 PM</p>
+                    <p class="event-location">Santiago Bernabeu, Madrid</p>
+                    <p class="event-description">Vive la final del mundial 2024 en el Santiago Bernabeu y disfrutareis de una experiencia inolvidable.</p>
+                    <a href="/html/eventDetail.html" class="btn">Más Información</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Meet Up & Fun. All rights reserved.</p>
+    </footer>
+
+    <div class="modal-overlay" id="modal-overlay">
+        <div class="modal">
+            <button class="close-btn" id="close-btn">&times;</button>
+            <h2>Register for Meet Up & Fun</h2>
+            <form class="registration-form" id="registration-form">
+                <div class="form-group">
+                    <label for="fullname">Full Name:</label>
+                    <input type="text" id="fullname" name="fullname" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <div class="form-group">
+                    <label for="confirm-password">Confirm Password:</label>
+                    <input type="password" id="confirm-password" name="confirm-password" required>
+                </div>
+                <button type="submit" class="register-btn">Register</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

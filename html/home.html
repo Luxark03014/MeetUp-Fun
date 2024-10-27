@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meet Up & Fun - Discover Exciting Events</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="/styles/style.css" rel="stylesheet">
+   
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo">Meet Up & Fun</div>
+            <div class="nav-links">
+                <a href="/html/home.html">Home</a>
+                <a href="/html/eventos.html">Eventos</a>
+                <a href="/html/profile.html">Perfil</a>
+                <a href="/html/contact.html">Contacto</a>
+            </div>
+            <button class="register-btn" id="register-btn">Registro</button>
+        </nav>
+        
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+          <video class="hero-video" autoplay loop muted playsinline>
+            <source  src="/media/8060-206468109_small.mp4" type="video/mp4">
+            Tu navegador no soporta la reproducción de videos.
+        </video>
+            <div class="container hero-content">
+                <h1>Descubre Eventos <span class="changing-word">
+                    <span class="active">Emocionantes</span>
+                    <span>Increibles</span>
+                    <span>Inolvidables</span>
+                    <span>Inspiradores</span>
+                </span> Cerca de Ti</h1>
+                <p>Unete a nuestra comunidad y vive momentos inolvidables con más gente que compartan tus gustos.</p>
+                <a href="/html/eventos.html" class="btn">Explora Eventos</a>
+            </div>
+        </section>
+
+        <section id="features" class="features">
+            <div class="container">
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <h3>Facil de Usar</h3>
+                        <p>Encuentra y únete a eventos con solo unos pocos clics.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>Conecta con Personas</h3>
+                        <p>Conoce nuevos amigos que comparten tus intereses.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>Organiza Eventos</h3>
+                        <p>Crea y gestiona tus propios eventos sin esfuerzo.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>Diversidad de Actividades</h3>
+                        <p>Desde aventuras al aire libre hasta reuniones tecnológicas, encuentre su pasión.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="testimonials" class="testimonials">
+            <div class="container">
+                <div class="testimonial-grid">
+                    <div class="testimonial-card">
+                        <p>"He hecho muchos amigos nuevos a través de Meet Up & Fun. ¡Los eventos siempre están bien organizados y son emocionantes!"</p>
+                        <div class="testimonial-author">- Sara J.</div>
+                    </div>
+                    <div class="testimonial-card">
+                        <p>"Como organizador de eventos, me encanta lo fácil que es crear y gestionar eventos. La plataforma es fácil de usar e intuitiva."</p>
+                        <div class="testimonial-author">- Miguel R.</div>
+                    </div>
+                    <div class="testimonial-card">
+                        <p>"Meet Up & Fun ha transformado mi vida social. ¡He descubierto actividades increíbles que nunca pensé que existían en mi área!"</p>
+                        <div class="testimonial-author">- Sofia L.</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="featured" class="featured-event">
+            <div class="container">
+                <h1>Evento Destacado</h1>
+                <div class="featured-event-content">
+                    <div class="featured-event-image">
+                        <img src="/media/pexels-rdne-8172941.jpg" alt="Featured Event">
+                    </div>
+                    
+                    <div class="featured-event-info">
+                        <h2>Yoga en el parque</h2>
+                        <p>Únase a nosotros para una relajante tarde de yoga mientras contemplamos la puesta de sol sobre el horizonte de la ciudad. ¡Perfecto para todos los niveles!</p>
+                        <p><strong>Fecha:</strong> 15 Julio, 2024</p>
+                        <p><strong>Hora:</strong> 7:00 PM - 8:30 PM</p>
+                        <p><strong>Localizacion:</strong> Parc de la Ciutadella, Barcelona</p>
+                        <a href="/html/eventDetail.html" class="btn">Mas Información</a>
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Meet Up & Fun. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <div class="modal-overlay" id="modal-overlay">
+        <div class="modal">
+            <button class="close-btn" id="close-btn">&times;</button>
+            <h2>Registro para Meet Up & Fun</h2>
+            <form class="registration-form" id="registration-form">
+                <div class="form-group">
+                    <label for="fullname">Nombre completo:</label>
+                    <input type="text" id="fullname" name="fullname" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Contraseña:</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <div class="form-group">
+                    <label for="confirm-password">Confirmar Contraseña:</label>
+                    <input type="password" id="confirm-password" name="confirm-password" required>
+                </div>
+                <button type="submit" class="register-btn">Aceptar</button>
+            </form>
+        </div>
+    </div>
+   <script>
+    function animateOnScroll() {
+            const featureCards = document.querySelectorAll('.feature-card');
+            const testimonialCards = document.querySelectorAll('.testimonial-card');
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate');
+                    }
+                });
+            }, { threshold: 0 });
+
+            featureCards.forEach(card => observer.observe(card));
+            testimonialCards.forEach(card => observer.observe(card));
+        }
+        function changeWord() {
+            const words = document.querySelectorAll('.changing-word span');
+            let currentIndex = 0;
+
+            setInterval(() => {
+                words[currentIndex].classList.remove('active');
+                currentIndex = (currentIndex + 1) % words.length;
+                words[currentIndex].classList.add('active');
+            }, 2000);
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            animateOnScroll();
+            changeWord();
+        });
+   </script>
+    <script src="/script/script.js" defer></script>
+</body>
+</html>

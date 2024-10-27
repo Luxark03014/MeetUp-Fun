@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile - Meet Up & Fun</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="/styles/styles-profile.css" rel="stylesheet">
+    <script src="/script/script.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo">Meet Up & Fun</div>
+            <div class="nav-links">
+                <a href="home.html">Home</a>
+                <a href="eventos.html">Eventos</a>
+                <a href="profile.html">Perfil</a>
+                <a href="contact.html">Contacto</a>
+            </div>
+            <button class="register-btn" id="register-btn">Registro</button>
+        </nav>
+    </header>
+    
+    <main>
+        <div class="container">
+            <div class="profile-header">
+                <img src="/media/profile-pic.webp" alt="User Profile" class="profile-photo">
+                <h1 class="profile-name">Lucas Martínez</h1>
+            </div>
+
+            <section class="profile-section">
+                <h2>Información Personal </h2>
+                <form class="edit-form" id="personal-info-form">
+                    <div class="form-group">
+                        <label for="name">Nombre:</label>
+                        <input type="text" id="name" name="name" value="Lucas Martínez" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" value="correofalso@ejemplo.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="bio">Biografia:</label>
+                        <textarea id="bio" name="bio" rows="4">Me encanta atender y organizar eventos!</textarea>
+                    </div>
+                    <button type="submit">Guardar cambios</button>
+                </form>
+            </section>
+            
+            <section class="profile-section">
+                <h2>Tus eventos</h2>
+                <div class="events-table">
+                    <div class="event-card">
+                        <div class="event-title">Hackaton</div>
+                        <div class="event-date">27 Octubre, 2024</div>
+                        <div class="event-location">Tech Hub, Barcelona</div>
+                    </div>
+                    <div class="event-card">
+                        <div class="event-title">Yoga en el Parque</div>
+                        <div class="event-date">20 Julio, 2024</div>
+                        <div class="event-location">Parc de la Ciutadella</div>
+                    </div>
+                    <div class="event-card">
+                        <div class="event-title">Club de Lectura</div>
+                        <div class="event-date">25 Julio, 2024</div>
+                        <div class="event-location">Biblioteca Nou Barris</div>
+                    </div>
+                    <div class="event-card">
+                        <div class="event-title">Curso de Cocina</div>
+                        <div class="event-date">1 Agosto, 2024</div>
+                        <div class="event-location">La Maquinista, Barcelona</div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Meet Up & Fun. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <div class="modal-overlay" id="modal-overlay">
+        <div class="modal">
+            <button class="close-btn" id="close-btn">&times;</button>
+            <h2>Registro para Meet Up & Fun</h2>
+            <form class="registration-form" id="registration-form">
+                <div class="form-group">
+                    <label for="fullname">Nombre completo:</label>
+                    <input type="text" id="fullname" name="fullname" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Contraseña:</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <div class="form-group">
+                    <label for="confirm-password">Confirmar Contraseña:</label>
+                    <input type="password" id="confirm-password" name="confirm-password" required>
+                </div>
+                <button type="submit" class="register-btn">Aceptar</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
